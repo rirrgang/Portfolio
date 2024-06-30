@@ -1,0 +1,102 @@
+{% load static %} {% load i18n %}
+<head>
+  <meta name="description" content="RobDevSolutions - Das Portfolio von Robert Irrgang. Als erfahrener Datenbank-Ingenieur und Softwareentwickler biete ich maßgeschneiderte Lösungen im Bereich Softwareentwicklung und Datenbanken. Besuchen Sie meine Website, um mehr über meine Projekte und Fähigkeiten zu erfahren." />
+  <meta name="keywords" content="Robert Irrgang, RobDevSolutions, Softwareentwicklung, Datenbank-Ingenieur, Data Engineer, Portfolio, Datenbanken, Softwareprojekte" />
+  <link rel="canonical" href="https://robdevsolutions.pythonanywhere.com/de/" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Robert Irrgang</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <!-- Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <!-- Ajax JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <!-- AOS JavaScript -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/5615ca7e9d.js" crossorigin="anonymous"></script>
+  <!-- ROBOTO SANS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <!-- PROGRESSBAR JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+  <!-- Custom Style Sheet -->
+  <link rel="stylesheet" href="{% static 'portfoliov2/css/style.css' %}" />
+  <!-- FAVICON -->
+  <link rel="icon" type="image/x-icon" href="{% static 'portfoliov2/pictures/logo.png' %}" />
+  <!-- THREEJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Prism CSS with Okaidia theme -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" />
+  <!-- Prism Line Numbers CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-numbers/prism-line-numbers.min.css" />
+  <!-- Simple Bar -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.3.0/dist/simplebar.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@5.3.0/dist/simplebar.min.js"></script>
+</head>
+
+<body class="dark-mode">
+  {% include 'portfoliov2_navigation.html' %} {% include 'portfoliov2_sidenavigation.html' %}
+
+  <!-- Loader overlay -->
+  <div id="loader" class="loader-overlay d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <div class="video-content">{% block videoContent %} {% endblock videoContent %}</div>
+
+  <div id="mainContent" class="content">
+    <div class="container">{% block content %} {% include 'portfoliov2_home.html' %} {% include 'portfoliov2_about.html' %} {% include 'portfoliov2_projects.html' %} {% include 'portfoliov2_contact.html' %} {% endblock content %}</div>
+  </div>
+
+  {% include 'portfoliov2_footer.html' %}
+
+  <!-- Loader Overlay Script-->
+  <script src="{% static 'portfoliov2/scripts/loaderOverlay.js' %}"></script>
+
+  <!-- Smooth Scroll Animation Script-->
+  <script src="{% static 'portfoliov2/scripts/smoothScrollAnim.js' %}"></script>
+
+  <!-- 3D Cards Script-->
+  <script src="{% static 'portfoliov2/scripts/cards3D.js' %}"></script>
+
+  <!-- Custom Progressbar Script -->
+  <script src="{% static 'portfoliov2/scripts/customProgressbars.js' %}"></script>
+
+  <!-- Add Odd Hexagon Symbols -->
+  <script src="{% static 'portfoliov2/scripts/oddHexagonSymbols.js' %}"></script>
+
+  <!-- Add Starfield ThreeJs Effect -->
+  <img style="display: none" id="hexagonImg" src="{% static 'portfoliov2/pictures/hexagon.png' %}" alt="My Image" />
+  <!-- <img style="display: none" id="notesImg" src="{% static 'portfoliov2/pictures/notes.png' %}" alt="My Image" /> -->
+  <script src="{% static 'portfoliov2/scripts/starfieldEffectThree.js' %}"></script>
+
+  <!-- About Swipe Button Script -->
+  <script src="{% static 'portfoliov2/scripts/aboutSwipeButton.js' %}"></script>
+
+  <!-- Prism.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- Prism Line Numbers Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <!-- Clipboard.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+</body>

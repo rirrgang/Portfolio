@@ -1,0 +1,210 @@
+ 
+ {% block content %}{% load static %}
+ <section class="container" id="projects" style="    padding-top: 50px !important; background: url(https://img.freepik.com/premium-vector/blueprint-digital-paper-background-grid-background_97886-5366.jpg); max-width: 100%; box-shadow: 0px -3px 10px black inset;">
+ <!-- style="padding-top: 100px !important; height: 100vh; background-color: rgb(240, 240, 240);" -->
+ 
+<div class="container">
+  <div class="row mt-4" data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000">
+    <div class="col d-flex justify-content-center">
+      <h2 style="color:white;">BAU</h2>
+      <h2 class="primary-text" style="margin-left: 10px">PROJEKTE</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div id="card-container" class="col-12 col-md-6 col-lg-4">
+      <div class="title-container">
+        <p>KUTZLEBEN</p>
+      </div>
+      <img src="https://architekten-thueringen.de/getmedia.php/_media/akt/202109/65796v0-orig.jpg" id="card-picture"></img>
+      <div id="card-text-container">
+        <h3 id="card-text-heading">Rittergut Lützensömmern</h3>
+        <h5 id="card-text">Neubau Mehrzweckgebäude Kinder- und Jugendakademie</h5>
+      </div>
+      <div id="circle">
+        <i id="circle-icon" class="fa-solid fa-house"></i>
+      </div>
+    </div>
+    <div id="card-container" class="col-12 col-md-6 col-lg-4">
+      <div class="title-container">
+        <p>BAD LANGENSALZA</p>
+      </div>
+      <img src="https://architekten-thueringen.de/getmedia.php/_media/akt/202303/77089v0-orig.jpg?h=480" id="card-picture"></img>
+      <div id="card-text-container">
+        <h3 id="card-text-heading">Einfamilienwohnhaus</h3>
+        <h5 id="card-text">Errichtung in Holzbauweise</h5>
+      </div>
+      <div id="circle">
+        <i id="circle-icon" class="fa-solid fa-file-pen"></i>
+      </div>
+    </div>
+    <div id="card-container" class="col-12 col-md-6 col-lg-4">
+      <div class="title-container">
+        <p>HERBSLEBEN</p>
+      </div>
+      <img src="https://architekten-thueringen.de/getmedia.php/_media/akt/201507/39731v0-orig.jpg" id="card-picture"></img>
+      <div id="card-text-container">
+        <h3 id="card-text-heading">Hofhaus</h3>
+        <h5 id="card-text">Neubau</h5>
+      </div>
+      <div id="circle">
+        <i id="circle-icon" class="fa-solid fa-house"></i>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<style>
+  #circle-icon::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.25s ease-in-out;
+    text-shadow: 0 0 3px #000;
+    font-size: 42px;
+    transition: font-size 0.1s ease-in-out 0.25s;
+  }
+
+  #card-container {
+    height: 500px;
+    position: relative;
+    padding: 0px;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+    margin-top:20px
+  }
+
+  .title-container {
+    height: 25px;
+    box-shadow: 0px 0px 15px #bdbdbd;
+    position: relative;
+    top: 25px;
+    transition: top 0.7s ease-in-out;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: rgb(42, 42, 42);
+  }
+
+  .title-container p {
+    color: var(--text-color);
+    text-align: left;
+    padding-left: 10px;
+    font-weight: bold;
+  }
+
+  #card-picture {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    box-shadow: 3px 3px 3px #424242, -3px 3px 3px #424242;
+    transition: box-shadow 0.3s ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  #card-container #card-text-container{
+    box-shadow: 3px 3px 3px #424242, -3px 3px 3px #424242;
+    transition: box-shadow 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
+  }
+
+  #card-text-container {
+    position: relative;
+    /* height: 200px; */
+    margin-left: 10px;
+    box-shadow: 3px 3px 3px #424242, -3px 3px 3px #424242;
+    margin-right: 10px;
+    transition: box-shadow 0.5s ease-in-out;
+    top: -180px;
+    transition: top 0.5s ease-in-out;
+    background-color: rgb(42, 42, 42);
+  }
+
+  #card-text-heading {
+    padding-top: 10px;
+    transition: 0.5s ease-in-out;
+    word-wrap: break-word;
+    color: var(--text-color);
+  }
+
+  #card-text {
+    color: var(--text-color);
+    transition: 2s ease-in-out;
+    padding-bottom: 20px;
+  }
+
+  #circle {
+    position: absolute;
+    background-color: black;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 270px;
+    right: -12px;
+    z-index: 10;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0px 1px 10px black;
+  }
+
+  #circle-icon {
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+  }
+
+  #card-container:hover #card-text-heading {
+    color: var(--primary-accent);
+  }
+
+  #card-container:hover #card-text {
+    color: var(--text-color);
+  }
+
+  #card-container:hover #card-picture {
+    box-shadow: 3px 3px 5px #000000, -3px 3px 5px #000000;
+  }
+
+  #card-container:hover #card-text-container {
+    box-shadow: 3px 3px 3px var(--primary-accent), -3px 3px 3px var(--primary-accent);
+    transition: box-shadow 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
+    top: 0px;
+  }
+
+  #card-container:hover .title-container {
+    top: 0;
+  }
+
+  #card-container:hover #circle {
+    background-color: var(--primary-accent) !important;
+  }
+
+  #card-container:hover #circle-icon::before {
+    font-size: 45px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    #card-text-container {
+      top: 0px;
+    }
+
+    .title-container {
+      top: 0px;
+    }
+
+    #card-text-heading {
+      color: var(--primary-accent);
+    }
+
+    #card-picture {
+      box-shadow: 3px 3px 5px #000000, -3px 3px 5px #000000;
+    }
+  }
+</style>
+{% endblock %}

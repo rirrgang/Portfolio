@@ -1,0 +1,459 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-12 09:39+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\onePageTemplate\templates\onePageTemplate_contact.html:7
+#: .\portfoliov2\templates\portfoliov2_contact.html:5
+msgid "CONTACT"
+msgstr "KONTAKTIERE"
+
+#: .\onePageTemplate\templates\onePageTemplate_contact.html:8
+#: .\portfoliov2\templates\portfoliov2_about.html:10
+#: .\portfoliov2\templates\portfoliov2_contact.html:6
+msgid "ME"
+msgstr "MICH"
+
+#: .\onePageTemplate\templates\onePageTemplate_contact.html:13
+#: .\portfoliov2\templates\portfoliov2_contact.html:11
+msgid "REACH OUT"
+msgstr "MELDEN SIE SICH"
+
+#: .\onePageTemplate\templates\onePageTemplate_contact.html:14
+#: .\portfoliov2\templates\portfoliov2_contact.html:12
+msgid ""
+"Unlock your potential. With personalized expertise and tailored solutions, "
+"I'll help you achieve your goals and overcome challenges. Let's collaborate "
+"and make a difference together. Reach out today!"
+msgstr ""
+"Entfalten Sie Ihr Potenzial. Mit persönlicher Expertise und "
+"maßgeschneiderten Lösungen helfe ich Ihnen Ihre Ziele und Herausforderungen "
+"zu meistern. Lassen Sie uns zusammenarbeiten und gemeinsam einen Unterschied "
+"machen. Melden Sie sich noch heute!"
+
+#: .\onePageTemplate\templates\onePageTemplate_contact.html:20
+#: .\portfoliov2\templates\portfoliov2_contact.html:18
+msgid "ADDRESS"
+msgstr "ADRESSE"
+
+#: .\onePageTemplate\templates\onePageTemplate_contact.html:69
+#: .\portfoliov2\templates\portfoliov2_contact.html:58
+msgid "Subject"
+msgstr "Thema"
+
+#: .\onePageTemplate\templates\onePageTemplate_contact.html:73
+#: .\portfoliov2\templates\portfoliov2_contact.html:62
+msgid "Message"
+msgstr "Nachricht"
+
+#: .\onePageTemplate\templates\onePageTemplate_contact.html:76
+#: .\portfoliov2\templates\portfoliov2_contact.html:65
+msgid "SEND MESSAGE"
+msgstr "NACHRICHT SENDEN"
+
+#: .\onePageTemplate\templates\onePageTemplate_footer.html:4
+#: .\portfoliov2\templates\portfoliov2_footer.html:4
+msgid "Created with"
+msgstr "Erstellt mit"
+
+#: .\onePageTemplate\templates\onePageTemplate_footer.html:4
+#: .\portfoliov2\templates\portfoliov2_footer.html:4
+msgid "by Robert Irrgang &copy; 2023 RobDevSolutions. All rights reserved."
+msgstr ""
+"von Robert Irrgang &copy; 2023 RobDevSolutions. Alle Rechte vorbehalten."
+
+#: .\onePageTemplate\templates\onePageTemplate_footer.html:6
+#: .\portfoliov2\templates\portfoliov2_footer.html:6
+msgid "Legal Notice"
+msgstr "Impressum"
+
+#: .\onePageTemplate\templates\onePageTemplate_footer.html:13
+#: .\onePageTemplate\templates\onePageTemplate_sidenavigation.html:5
+#: .\portfoliov2\templates\portfoliov2_footer.html:13
+#: .\portfoliov2\templates\portfoliov2_sidenavigation.html:5
+#: .\portfoliov2\templates\portfoliov2_switchLanguage.html:3
+msgid "Change Language"
+msgstr "Sprache ändern"
+
+#: .\onePageTemplate\templates\onePageTemplate_footer.html:17
+#: .\onePageTemplate\templates\onePageTemplate_sidenavigation.html:9
+#: .\portfoliov2\templates\portfoliov2_footer.html:17
+#: .\portfoliov2\templates\portfoliov2_sidenavigation.html:9
+msgid "Visit LinkedIn"
+msgstr "Besuche LinkedIn"
+
+#: .\onePageTemplate\templates\onePageTemplate_footer.html:21
+#: .\onePageTemplate\templates\onePageTemplate_sidenavigation.html:13
+#: .\portfoliov2\templates\portfoliov2_footer.html:21
+#: .\portfoliov2\templates\portfoliov2_sidenavigation.html:13
+msgid "Visit Xing"
+msgstr "Besuche Xing"
+
+#: .\onePageTemplate\templates\onePageTemplate_footer.html:25
+#: .\onePageTemplate\templates\onePageTemplate_sidenavigation.html:17
+#: .\portfoliov2\templates\portfoliov2_footer.html:25
+#: .\portfoliov2\templates\portfoliov2_sidenavigation.html:17
+msgid "Visit YouTube"
+msgstr "Besuche YouTube"
+
+#: .\onePageTemplate\templates\onePageTemplate_footer.html:29
+#: .\onePageTemplate\templates\onePageTemplate_sidenavigation.html:21
+#: .\portfoliov2\templates\portfoliov2_footer.html:29
+#: .\portfoliov2\templates\portfoliov2_sidenavigation.html:21
+msgid "Visit Twitter"
+msgstr "Besuche Twitter"
+
+#: .\onePageTemplate\templates\onePageTemplate_footer.html:33
+#: .\onePageTemplate\templates\onePageTemplate_sidenavigation.html:25
+#: .\portfoliov2\templates\portfoliov2_footer.html:33
+#: .\portfoliov2\templates\portfoliov2_sidenavigation.html:25
+msgid "Visit GitHub"
+msgstr "Besuche GitHub"
+
+#: .\onePageTemplate\templates\onePageTemplate_home.html:9
+#: .\portfoliov2\templates\portfoliov2_home.html:14
+msgid "HI I'AM"
+msgstr "HI ICH BIN"
+
+#: .\onePageTemplate\templates\onePageTemplate_home.html:14
+msgid "FREIER ARCHITEKT"
+msgstr ""
+
+#: .\onePageTemplate\templates\onePageTemplate_legalnotice.html:6
+#: .\portfoliov2\templates\portfoliov2_contactSuccess.html:4
+#: .\portfoliov2\templates\portfoliov2_legalnotice.html:5
+#: .\portfoliov2\templates\portfoliov2_modelDetail.html:5
+#: .\portfoliov2\templates\portfoliov2_programmingDetail.html:5
+msgid "Back"
+msgstr "Zurück"
+
+#: .\onePageTemplate\templates\onePageTemplate_navigation.html:18
+#: .\portfoliov2\templates\portfoliov2_navigation.html:17
+msgid "Home"
+msgstr "Start"
+
+#: .\onePageTemplate\templates\onePageTemplate_navigation.html:21
+#: .\portfoliov2\templates\portfoliov2_navigation.html:20
+msgid "About"
+msgstr "Über mich"
+
+#: .\onePageTemplate\templates\onePageTemplate_navigation.html:24
+#: .\portfoliov2\templates\portfoliov2_navigation.html:23
+msgid "Projects"
+msgstr "Projekte"
+
+#: .\onePageTemplate\templates\onePageTemplate_navigation.html:27
+#: .\portfoliov2\templates\portfoliov2_navigation.html:26
+msgid "Contact"
+msgstr "Kontakt"
+
+#: .\onePageTemplate\templates\onePageTemplate_projects.html:25
+#: .\portfoliov2\templates\portfoliov2_projects.html:25
+msgid "Video"
+msgstr "Video"
+
+#: .\onePageTemplate\templates\onePageTemplate_projects.html:38
+#: .\portfoliov2\templates\portfoliov2_projects.html:38
+msgid "Category"
+msgstr "Kategorie"
+
+#: .\onePageTemplate\templates\onePageTemplate_projects.html:223
+#: .\portfoliov2\templates\portfoliov2_projects.html:54
+msgid "LOAD MORE"
+msgstr "MEHR LADEN"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:9
+msgid "ABOUT"
+msgstr "ÜBER"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:17
+msgid "PERSONAL"
+msgstr "PERSÖNLICHE"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:18
+msgid "INFOS"
+msgstr "INFOS"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:26
+msgid "First Name"
+msgstr "Vorname"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:30
+msgid "Last Name"
+msgstr "Nachname"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:34
+msgid "Age"
+msgstr "Alter"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:38
+msgid "Gender"
+msgstr "Geschlecht"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:39
+msgid "Male"
+msgstr "Männlich"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:42
+msgid "Nationality"
+msgstr "Nationalität"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:43
+msgid "Germany"
+msgstr "Deutschland"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:52
+msgid "Achievements"
+msgstr "Erfolge"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:53
+#, fuzzy
+#| msgid "Marathon Running"
+msgid "Ultra & Marathon Running"
+msgstr "Ultra & Marathonlauf"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:56
+msgid "Hobbies"
+msgstr ""
+
+#: .\portfoliov2\templates\portfoliov2_about.html:57
+msgid "Trail Running, Music, Piano"
+msgstr "Trailrunning, Musik, Klavier"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:60
+msgid "Traits"
+msgstr "Merkmale"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:61
+msgid "mental strength, endurance, dedication"
+msgstr "mentale Stärke, Ausdauer, Hingabe"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:64
+msgid "Spoken Languages"
+msgstr "Sprachen"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:65
+msgid "German, English"
+msgstr "Deutsch, Englisch"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:68
+msgid "Work Experience"
+msgstr "Erfahrung"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:69
+msgid "Beginner"
+msgstr "Anfänger"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:84
+msgid "TECHNOLOGICAL"
+msgstr "TECH"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:85
+#: .\portfoliov2\templates\portfoliov2_about.html:144
+#: .\portfoliov2\templates\portfoliov2_about.html:189
+msgid "SKILLS"
+msgstr "FÄHIGKEITEN"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:97
+msgid "Web Development"
+msgstr "Web Entwicklung"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:98
+msgid ""
+"Unlocking the potential of web development frameworks and principles, I "
+"weave magic into your online presence. Guided by Python Django, I bring your "
+"dream webpages to life with creativity and precision."
+msgstr ""
+"Ich erschließe das Potenzial von Webentwicklungs-Frameworks und -Prinzipien "
+"und hauche Magie in Ihre Online-Präsenz. Unter der Anleitung von Python "
+"Django erwecke ich Ihre Traumwebseiten mit Kreativität und Präzision zum "
+"Leben."
+
+#: .\portfoliov2\templates\portfoliov2_about.html:111
+msgid "Databases"
+msgstr "Datenbanken"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:112
+msgid ""
+"Diving deep into SQL and database architecture, I engineer robust solutions "
+"for your data needs. From Oracle to PostgreSQL and MySQL, I create tailored "
+"solutions that fit like a glove."
+msgstr ""
+"Ich tauche tief in die SQL- und Datenbankarchitektur ein und entwickle "
+"robuste Lösungen für Ihre Datenanforderungen. Von Oracle über PostgreSQL bis "
+"hin zu MySQL erstelle ich maßgeschneiderte Lösungen, die wie angegossen "
+"passen."
+
+#: .\portfoliov2\templates\portfoliov2_about.html:125
+#: .\portfoliov2\templates\portfoliov2_projects.html:19
+msgid "3D Modelling"
+msgstr "3D Modellierung"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:126
+msgid ""
+"Unleashing the power of imagination in mesmerizing 3D creations. From "
+"product showcases to artistic masterpieces and immersive gaming experiences, "
+"I breathe life into your vision with Blender's magic."
+msgstr ""
+"Entfesseln Sie die Kraft der Fantasie in faszinierenden 3D-Kreationen. Von "
+"Produktpräsentationen über künstlerische Meisterwerke bis hin zu immersiven "
+"Spielerlebnissen – ich hauche Ihrer Vision Leben ein mit der Magie von "
+"Blender."
+
+#: .\portfoliov2\templates\portfoliov2_about.html:143
+msgid "PROGRAMMING"
+msgstr "CODING"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:188
+msgid "WEBDEV"
+msgstr "WEBDEV"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:240
+msgid "EDUCATION"
+msgstr "AUSBILDUNG"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:241
+msgid "EXPERIENCE"
+msgstr "BERUFSERFAHRUNG"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:286
+msgid "CURRICULUM"
+msgstr "MEIN"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:287
+msgid "VITAE"
+msgstr "LEBENSLAUF"
+
+#: .\portfoliov2\templates\portfoliov2_about.html:290
+#: .\portfoliov2\templates\portfoliov2_programmingDetail.html:58
+msgid "DOWNLOAD"
+msgstr "HERUNTERLADEN"
+
+#: .\portfoliov2\templates\portfoliov2_contact.html:27
+msgid "CALL ME"
+msgstr "RUFEN SIE MICH AN"
+
+#: .\portfoliov2\templates\portfoliov2_contact.html:36
+#, fuzzy
+#| msgid "CALL ME"
+msgid "MAIL ME"
+msgstr "SCHREIBEN SIE MIR"
+
+#: .\portfoliov2\templates\portfoliov2_contactSuccess.html:2
+msgid "Thank you for contacting me!"
+msgstr "Danke fürs kontaktieren!"
+
+#: .\portfoliov2\templates\portfoliov2_contactSuccess.html:3
+msgid "Your message has been sent successfully."
+msgstr "Deine Nachricht wurde erfolgreich versendet."
+
+#: .\portfoliov2\templates\portfoliov2_home.html:19
+msgid "DATA ENGINEER & SOFTWARE DEVELOPER"
+msgstr "DATENINGENIEUR & SOFTWAREENTWICKLER"
+
+#: .\portfoliov2\templates\portfoliov2_home.html:20
+msgid ""
+"As a Data Engineer and Software Developer, I specialize in unleashing the "
+"potential of your data and crafting robust software solutions. With "
+"expertise in database management, data integration, and software "
+"development, I ensure seamless operations, actionable insights, and drive "
+"your success through the power of data."
+msgstr ""
+"Als Data Engineer und Softwareentwickler habe ich mich darauf spezialisiert, "
+"das Potenzial Ihrer Daten zu entfesseln und robuste Softwarelösungen zu "
+"gestalten. Mit Expertise in Datenbankmanagement, Datenintegration und "
+"Softwareentwicklung sorge ich für reibungslose Abläufe, handlungsorientierte "
+"Erkenntnisse und fördere Ihren Erfolg durch die Kraft der Daten."
+
+#: .\portfoliov2\templates\portfoliov2_home.html:26
+#, fuzzy
+#| msgid "PROJECTS"
+msgid "MY PROJECTS"
+msgstr "MEINE PROJEKTE"
+
+#: .\portfoliov2\templates\portfoliov2_modelDetail.html:6
+msgid "Model"
+msgstr "Modell"
+
+#: .\portfoliov2\templates\portfoliov2_modelDetail.html:12
+#, fuzzy
+#| msgid "3D Modelling"
+msgid "3D Model"
+msgstr "3D Modellierung"
+
+#: .\portfoliov2\templates\portfoliov2_modelDetail.html:25
+msgid "Rendered Image"
+msgstr "Gerendertes Bild"
+
+#: .\portfoliov2\templates\portfoliov2_programmingDetail.html:11
+#, fuzzy
+#| msgid "Programming"
+msgid "Programming Project"
+msgstr "Programmierung"
+
+#: .\portfoliov2\templates\portfoliov2_programmingDetail.html:13
+#, fuzzy
+#| msgid "Created with"
+msgid "created by"
+msgstr "Erstellt mit"
+
+#: .\portfoliov2\templates\portfoliov2_programmingDetail.html:53
+msgid "Copy"
+msgstr "Kopieren"
+
+#: .\portfoliov2\templates\portfoliov2_programmingDetail.html:60
+msgid "VIEW CODE"
+msgstr ""
+
+#: .\portfoliov2\templates\portfoliov2_projects.html:5
+#, fuzzy
+#| msgid "CALL ME"
+msgid "ALL"
+msgstr "ALLE"
+
+#: .\portfoliov2\templates\portfoliov2_projects.html:6
+msgid "PROJECTS"
+msgstr "PROJEKTE"
+
+#: .\portfoliov2\templates\portfoliov2_projects.html:13
+msgid "All"
+msgstr "Alle"
+
+#: .\portfoliov2\templates\portfoliov2_projects.html:16
+msgid "Programming"
+msgstr "Programmierung"
+
+#: .\portfoliov2\templates\portfoliov2_projects.html:22
+msgid "Music"
+msgstr "Musik"
+
+#: .\portfoliov2\templates\portfoliov2_switchLanguage.html:40
+msgid "SWITCH"
+msgstr "WECHSELN"
+
+#~ msgid "MORE ABOUT ME"
+#~ msgstr "MEHR ÜBER MICH"
+
+#~ msgid "Change language"
+#~ msgstr "Sprache ändern"
+
+#~ msgid "Send Message"
+#~ msgstr "SENDEN"
+
+#~ msgid "Load More"
+#~ msgstr "Mehr Laden"

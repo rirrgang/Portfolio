@@ -1,0 +1,38 @@
+{% load static %} {% load i18n %} {% block content %}
+
+<!-- <section class="container" id="home" style="background:url(https://images8.alphacoders.com/132/1322334.png); margin-top:50px !important; padding-top:50px !important; background-size:cover; height: 100vh; background-position: center center; max-width: 100%; box-shadow: 0px -3px 10px black inset;"> -->
+  <section class="container" id="home" style="background:url({% static 'images/house1.png'%}); margin-top:50px !important; padding-top:200px !important; background-size:cover; height: 100vh; background-position: center center; max-width: 100%; box-shadow: 0px -3px 10px black inset;">
+  <div class="container">
+    <div class="col-lg-6 col-md-8 col-sm-12" style="backdrop-filter: blur(2px); padding: 20px">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <h2>{% trans "HI I'AM" %}</h2>
+          <h2 class="primary-text" style="margin-left: 10px">JAN</h2>
+          <h2>-</h2>
+        </div>
+      </div>
+      <h3 class="mb-4">{% trans "FREIER ARCHITEKT" %}</h3>
+      <p class="mb-4 text-center" style="max-width: 500px; margin: 0 auto; color: #3b3b3b; text-shadow: 2px 2px 3px #a1a1a1; font-weight: bold;">
+        Als Architekt arbeite ich mit einer Leidenschaft für innovative Designlösungen, die Häuser und deren Räume nicht nur funktionell, sondern auch emotional gestalten. Mit über einem Jahrzehnt Erfahrung in der Branche habe ich das Privileg gehabt, Träume in greifbare Realitäten zu verwandeln und dabei stets den Menschen und ihre Bedürfnisse in den Mittelpunkt zu stellen. Jedes Gebäude erzählt eine Geschichte, und ich bin hier, um Ihnen zu helfen, Ihre zu schreiben.
+      </p>
+      <div id="swipe-button" class="btn btn-primary rounded-pill btn-transparent p-0 pr-5">
+        <div id="swipe-icon" class="rounded-circle btn-primary d-inline-flex align-items-center justify-content-center p-3">
+          <i class="fa-solid fa-arrow-right text-white"></i>
+        </div>
+        <a id="swipe-anchor" href="#projects"></a>
+        <span class="pl-3">PROJEKTE</span>
+      </div>
+    </div>
+  </div>
+  </img>
+  <!-- <div class="row" style="margin-top: 100px">
+    <div class="col-lg-4 d-flex justify-content-center">
+      <div class="content p4 profile-container">
+        <img class="profile-img" src="https://store.makerspace-bs.de/cdn/shop/articles/IMG_46821_4279_1080x_534ff5bd-e235-4764-8364-ddef89d70b26.webp?v=1655830976" alt="" loading="lazy" />
+      </div>
+    </div> -->
+
+    
+</section>
+
+{% endblock content %}

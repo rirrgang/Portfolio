@@ -1,0 +1,9 @@
+{% load i18n %}
+
+<ul>
+  {% get_available_languages as languages %} {% for language in languages %}
+  <li>
+    <a href="{% url 'set_language' language.code %}" data-language="{{ language.code }}"> {{ language.name_local }} </a>
+  </li>
+  {% endfor %}
+</ul>

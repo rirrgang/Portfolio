@@ -1,0 +1,32 @@
+{% extends extendHTML %} {% load static %} {% load i18n %} {% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <button onclick="history.back()" class="btn btn-secondary mb-2 mt-4"><i class="fa-solid fa-circle-left"></i> {% trans "Back" %}</button>
+      <h2>{% trans "Model" %}: {{ project.title }}</h2>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-8">
+      <h3>{% trans "3D Model" %}</h3>
+      <div class="model-container">
+        <iframe src="{{ model.modelSrc }}/embed?autospin=1&autostart=1&ui_theme=dark" allowfullscreen> </iframe>
+      </div>
+    </div>
+
+    <div class="col-md-4 mt-3">
+      <div class="row">
+        <h3>Details</h3>
+        <p class="block-format">{{ project.details }}</p>
+      </div>
+
+      <div class="row">
+        <h3>{% trans "Rendered Image" %}</h3>
+        <img src="{{ project.imgSrc }}" class="card-img" alt="Image 1" />
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,98 @@
+{% extends extendHTML %} {% load static %} {% load i18n %} {% block content %}
+
+<h2>{% trans "Change Language" %}</h2>
+
+<!-- Language Popup -->
+<div class="col mt-5">
+  <div id="languagePopup" class="language-popup">
+    <form action="{% url 'set_language' %}" method="post">
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{% url 'portfoliov2:base' %}" />
+      <!-- Redirect to home URL after switching language -->
+      <div class="row">
+        {% get_current_language as LANGUAGE_CODE %} {% get_available_languages as LANGUAGES %} {% for lang, lang_name in LANGUAGES %}
+        <div class="col-md-3 {% if forloop.first %}offset-md-3{% endif %} mt-4" data-aos="flip-left" data-aos-delay="0" data-aos-duration="1000">
+          <div class="card-3d-rotation" data-aos="flip-left" data-aos-delay="500" data-aos-duration="1000">
+            <div class="card-item">
+              <div class="card" style="height: auto">
+                <div class="language-option">
+                  <label for="lang-{{ lang }}">
+                    <!-- Radio button for selecting the language -->
+                    <input type="radio" name="language" id="lang-{{ lang }}" value="{{ lang }}" {% if lang == LANGUAGE_CODE %}checked{% endif %} style="display: none;">
+                  </label>
+                </div>
+                <div class="card-body">
+                  <!-- Display the language name -->
+                  <h5 class="card-title">{{ lang_name }}</h5>
+                  <!-- Display the language image -->
+                  {% with 'portfoliov2/pictures/'|add:lang|add:'.png' as img_path %}
+                  <img src="{% static img_path %}" alt="{{ lang_name }}" />
+                  {% endwith %}
+                </div>
+                <div class="card-3d-glow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <button type="submit" class="mt-4 btn btn-primary form-dark" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">{% trans "SWITCH" %} <i class="fas fa-repeat"></i></button>
+      <!-- Add a submit button -->
+    </form>
+  </div>
+</div>
+
+<style>
+  .language-option {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer; /* Indicate it's selectable */
+  }
+
+  .language-option img {
+    width: 30px; /* Adjust size as necessary */
+    height: 30px;
+    margin-right: 5px; /* Spacing between image and text */
+    vertical-align: middle; /* Aligns the image to the middle of the text */
+  }
+
+  .language-option input[type="radio"] {
+    display: none; /* Hide the radio button */
+  }
+
+  /* Style for the currently selected language */
+  .language-option input:checked + label {
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cardGlows = document.querySelectorAll(".card-3d-glow");
+    const cards = document.querySelectorAll(".card");
+
+    cardGlows.forEach((glow) => {
+      glow.addEventListener("click", function () {
+        // First, reset all card backgrounds
+        cards.forEach((card) => {
+          card.style.background = "#222";
+          card.style.color = "white";
+        });
+
+        const card = glow.closest(".card");
+        if (card) {
+          const input = card.querySelector(".language-option input[type='radio']");
+          if (input) {
+            input.checked = true;
+            // Now, set the background of the clicked card to darkgoldenrod
+            card.style.background = "darkgoldenrod";
+            card.style.color = "black";
+          }
+        }
+      });
+    });
+  });
+</script>
+
+{% endblock content %}

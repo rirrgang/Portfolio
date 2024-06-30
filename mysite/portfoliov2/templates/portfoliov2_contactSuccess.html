@@ -1,0 +1,5 @@
+{% extends 'portfoliov2_base.html' %} {% load i18n %} {% block content %}
+<h2>{% trans "Thank you for contacting me!" %}</h2>
+<p>{% trans "Your message has been sent successfully." %}</p>
+<a href="{% url 'portfoliov2:base' %}" class="btn btn-secondary mb-2 mt-4"><i class="fa-solid fa-circle-left"></i> {% trans "Back" %}</a>
+{% endblock %}

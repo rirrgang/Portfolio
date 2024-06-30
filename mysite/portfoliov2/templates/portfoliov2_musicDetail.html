@@ -1,0 +1,107 @@
+{% extends extendHTML %} {% load static %} {% block content %}
+<div class="col">
+  <button onclick="history.back()" class="btn btn-secondary mb-2 mt-4"><i class="fa-solid fa-circle-left"></i> Back</button>
+</div>
+<h2 class="">Created Music</h2>
+<div class="container">
+  <div id="accordion">
+    <div class="col-12">
+      <div class="card" style="height: auto">
+        <div class="card-header text-center" id="heading{{ forloop.counter }}">
+          <div class="audio-progress"></div>
+          <div class="row justify-content-between align-items-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 text-lg-left">
+              <button class="btn btn-success play-button p-2 pl-3 pr-3 mr-3" data-audio-src="{{ music.musicSrc }}" data-target="#collapse{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse{{ forloop.counter }}">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <button class="btn btn-warning p-1 pl-2 pr-2" data-toggle="collapse" data-target="#collapse{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse{{ forloop.counter }}">Info</button>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mt-3 mb-lg-0 mt-lg-0">
+              <h5>{{ project.title }}</h5>
+            </div>
+          </div>
+        </div>
+        <div id="collapse{{ forloop.counter }}" class="collapse" aria-labelledby="heading{{ forloop.counter }}">
+          <div class="card-body">
+            <table class="table table-striped music-details">
+              <tbody>
+                <tr>
+                  <th scope="row">Interpreter:</th>
+                  <td>{{ music.interpreter }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Genre:</th>
+                  <td>{{ music.genre }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Details:</th>
+                  <td>{{ project.details }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Created On:</th>
+                  <td>{{ project.createdOn }}</td>
+                </tr>
+                <tr>
+                  <div class="row mt-4 pl-4 pr-4 pb-2">
+                    <audio id="audio-player" controls controlsList="nodownload">
+                      <source id="player-source" src="#" type="audio/mp3" />
+                    </audio>
+                  </div>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // JavaScript code to handle the play button click event
+    const playButton = document.querySelector(".play-button");
+    const infoButton = document.querySelector(".btn-primary");
+    const musicAudioPlayer = document.getElementById("audio-player");
+    const musicAudioPlayerSource = document.getElementById("player-source");
+    const playBtnIcon = playButton.querySelector("i");
+    const audioSource = playButton.dataset.audioSrc;
+    const audioProgress = document.querySelector(".audio-progress");
+    musicAudioPlayerSource.src = audioSource;
+    musicAudioPlayer.load();
+
+    playButton.addEventListener("click", () => {
+      if (musicAudioPlayer.paused) {
+        playBtnIcon.classList.remove("fa-play");
+        playBtnIcon.classList.add("fa-pause");
+        playButton.classList.remove("btn-success");
+        playButton.classList.add("btn-danger");
+        musicAudioPlayer.play();
+      } else {
+        playBtnIcon.classList.remove("fa-pause");
+        playBtnIcon.classList.add("fa-play");
+        playButton.classList.remove("btn-danger");
+        playButton.classList.add("btn-success");
+        musicAudioPlayer.pause();
+      }
+    });
+    // Update audio progress bar
+    function updateAudioProgressBar() {
+      var audioDuration = musicAudioPlayer.duration;
+      var audioCurrentTime = musicAudioPlayer.currentTime;
+      var progressWidth = (audioCurrentTime / audioDuration) * 100;
+      audioProgress.style.width = `${progressWidth}%`;
+    }
+
+    // Call updateProgressBar on timeupdate event
+    musicAudioPlayer.addEventListener("timeupdate", updateAudioProgressBar);
+    musicAudioPlayer.addEventListener("ended", function () {
+      musicAudioPlayer.pause();
+      musicAudioPlayer.currentTime = 0;
+      playBtnIcon.classList.remove("fa-pause");
+      playBtnIcon.classList.add("fa-play");
+      updateAudioProgressBar();
+    });
+  });
+</script>
+{% endblock content %}

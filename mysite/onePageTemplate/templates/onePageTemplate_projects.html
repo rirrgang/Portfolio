@@ -1,0 +1,398 @@
+{% load static %} {% load i18n %} {% block content %}
+<section class="container" id="projects">
+  <div class="row mt-4" data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000">
+    <div class="col d-flex justify-content-center">
+      <h2>BAU</h2>
+      <h2 class="primary-text" style="margin-left: 10px">PROJEKTE</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-pills mb-3 justify-content-center" id="filterTab">
+        <li class="nav-item" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+          <a class="nav-link" data-category="All" href="">ALLE</a>
+        </li>
+        <li class="nav-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+          <a class="nav-link" data-category="Programming" href="">HÄUSER</a>
+        </li>
+        <li class="nav-item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          <a class="nav-link" data-category="3D Modelling" href="">WOHNUNGEN</a>
+        </li>
+        <li class="nav-item" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+          <a class="nav-link" data-category="Music" href="">ZEICHNUNGEN</a>
+        </li>
+        <!-- <li class="nav-item" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+          <a class="nav-link" data-category="Video" href="">{% trans "Video" %}</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+  <div class="row" id="projectCards" data-aos="fade-left" data-aos-delay="0" data-aos-duration="1000">
+    {% for project in projects %} {% if project.isVisible == True %}
+    <div class="col-md-4 project-card mb-4 mt-4" data-category="{{ project.category }}">
+      <div class="card-3d-rotation">
+        <div class="card-item">
+          <div class="card" style="background: url({{ project.imgSrc }});">
+            <div class="card-body">
+              <h5 class="card-title">{{ project.title }}</h5>
+              <p class="card-text">{% trans "Category" %}: {{ project.category }}</p>
+              <p class="card-text">{{ project.description }}</p>
+            </div>
+          </div>
+          <a href="{% url 'portfoliov2:modelDetail' project.pk %}" class="card-3d-glow">
+            <div class="education-symbol {{ project.categorySymbol }}">
+              <i class="{{ project.categorySymbol }}"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+  <div class="container">
+    <div class="row">
+      <div id="card-container" class="col-12 col-md-6 col-lg-4">
+        <div class="title-container">
+          <p>KUTZLEBEN</p>
+        </div>
+        <img src="https://architekten-thueringen.de/getmedia.php/_media/akt/202109/65796v0-orig.jpg" id="card-picture"></img>
+        <div id="card-text-container">
+          <h3 id="card-text-heading">Rittergut Lützensömmern</h3>
+          <h5 id="card-text">Neubau Mehrzweckgebäude Kinder- und Jugendakademie</h5>
+        </div>
+        <div id="circle">
+          <i id="circle-icon" class="fa-solid fa-house"></i>
+        </div>
+      </div>
+      <div id="card-container" class="col-12 col-md-6 col-lg-4">
+        <div class="title-container">
+          <p>BAD LANGENSALZA</p>
+        </div>
+        <img src="https://architekten-thueringen.de/getmedia.php/_media/akt/202303/77089v0-orig.jpg?h=480" id="card-picture"></img>
+        <div id="card-text-container">
+          <h3 id="card-text-heading">Einfamilienwohnhaus</h3>
+          <h5 id="card-text">Errichtung in Holzbauweise</h5>
+        </div>
+        <div id="circle">
+          <i id="circle-icon" class="fa-solid fa-file-pen"></i>
+        </div>
+      </div>
+      <div id="card-container" class="col-12 col-md-6 col-lg-4">
+        <div class="title-container">
+          <p>KUTZLEBEN</p>
+        </div>
+        <img src="https://architekten-thueringen.de/getmedia.php/_media/akt/201507/39731v0-orig.jpg" id="card-picture"></img>
+        <div id="card-text-container">
+          <h3 id="card-text-heading">Rittergut Lützensömmern</h3>
+          <h5 id="card-text">Neubau Mehrzweckgebäude Kinder- und Jugendakademie</h5>
+        </div>
+        <div id="circle">
+          <i id="circle-icon" class="fa-solid fa-house"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    #circle-icon::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.25s ease-in-out;
+      text-shadow: 0 0 3px #000;
+      font-size: 42px;
+      transition: font-size 0.1s ease-in-out 0.25s;
+    }
+  
+    #card-container {
+      height: 500px;
+      position: relative;
+      padding: 0px;
+      cursor: pointer;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 50px;
+    }
+  
+    .title-container {
+      height: 25px;
+      box-shadow: 0px 0px 15px #bdbdbd;
+      position: relative;
+      top: 25px;
+      transition: top 0.7s ease-in-out;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  
+    .title-container p {
+      color: black;
+      text-align: left;
+      padding-left: 10px;
+      font-weight: bold;
+    }
+  
+    #card-picture {
+      position: relative;
+      height: 300px;
+      width: 100%;
+      box-shadow: 3px 3px 3px #d1d1d1, -3px 3px 3px #d1d1d1;
+      transition: box-shadow 0.3s ease-in-out;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+  
+    #card-text-container {
+      position: relative;
+      /* height: 200px; */
+      padding: -10px;
+      margin-left: 10px;
+      box-shadow: 3px 3px 3px #d1d1d1, -3px 3px 3px #d1d1d1;
+      margin-right: 10px;
+      transition: box-shadow 0.5s ease-in-out;
+      top: -180px;
+      transition: top 0.5s ease-in-out;
+    }
+  
+    #card-text-heading {
+      padding-top: 10px;
+      transition: 1s ease-in-out;
+      word-wrap: break-word;
+    }
+  
+    #card-text {
+      color: rgb(194, 194, 194);
+      transition: 2s ease-in-out;
+      padding-bottom: 20px;
+    }
+  
+    #circle {
+      position: absolute;
+      background-color: #cfcfcf;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      top: 270px;
+      right: -12px;
+      z-index: 10;
+      transition: 0.5s ease-in-out;
+    }
+  
+    #circle-icon {
+      height: 100%;
+      width: 100%;
+      color: #ffffff;
+    }
+  
+    #card-container:hover #card-text-heading {
+      color: var(--primary-accent);
+    }
+  
+    #card-container:hover #card-text {
+      color: rgb(0, 0, 0);
+    }
+  
+    #card-container:hover #card-picture {
+      box-shadow: 3px 3px 3px rgb(170, 170, 170), -3px 3px 3px rgb(170, 170, 170);
+    }
+  
+    #card-container:hover #card-text-container {
+      box-shadow: 3px 3px 3px var(--primary-accent), -3px 3px 3px var(--primary-accent);
+      top: 0px;
+    }
+  
+    #card-container:hover .title-container {
+      top: 0;
+    }
+  
+    #card-container:hover #circle {
+      background-color: var(--primary-accent) !important;
+    }
+  
+    #card-container:hover #circle-icon::before {
+      font-size: 45px;
+    }
+  </style>
+
+
+  <div class="row justify-content-center mt-3">
+    <div class="col-md-12 text-center">
+      <button id="loadMoreBtn" class="btn btn-primary">{% trans "LOAD MORE" %} <i class="fas fa-rotate"></i></button>
+    </div>
+  </div>
+</section>
+
+<script>
+  $(document).ready(function () {
+    var categoryHasMoreProjects = {
+      All: true,
+      Programming: true,
+      "3D Modelling": true,
+      Music: true,
+      Video: true,
+    };
+
+    $("#filterTab a").click(function (e) {
+      e.preventDefault();
+      var category = $(this).data("category");
+      filterProjects(category);
+      setActiveNavItem($(this).parent());
+    });
+
+    function filterProjects(category) {
+      if (category === "All") {
+        $(".project-card").hide();
+        $(".project-card").fadeIn();
+      } else {
+        $(".project-card").hide();
+        $('.project-card[data-category="' + category + '"]').fadeIn();
+      }
+
+      // Show the "Load More" button if there are more projects to load for the current category
+      if (categoryHasMoreProjects[category]) {
+        $("#loadMoreBtn").show();
+      } else {
+        $("#loadMoreBtn").hide();
+      }
+
+      // If the "All" category has no more projects to load, hide the "Load More" button for all categories
+      if (!categoryHasMoreProjects["All"]) {
+        $("#loadMoreBtn").hide();
+      }
+    }
+
+    function setActiveNavItem(navItem) {
+      $("#filterTab .nav-item").removeClass("active");
+      navItem.addClass("active");
+    }
+
+    // Function to get the category of the active nav-item
+    function getActiveCategory() {
+      return $("#filterTab .nav-item.active a").data("category");
+    }
+
+    // Initially, set the active class for the default category
+    setActiveNavItem($("#filterTab .nav-item:first-child"));
+
+    filterProjects("All");
+
+    /*====================FUNCTIONS TO HANDLE THE DYNAMIC CARD LOADING====================*/
+
+    $("#loadMoreBtn").click(function () {
+      loadMoreProjects();
+    });
+
+    function loadMoreProjects() {
+      $.ajax({
+        url: "",
+        data: { category: getActiveCategory() },
+        success: function (response) {
+          var projects = response.projects;
+          if (projects.length > 0) {
+            var projectCards = $("#projectCards");
+
+            // Append new projects to the container
+            $.each(projects, function (index, project) {
+              var projectUrl = "";
+              switch (project.category) {
+                case "Programming":
+                  projectUrl = "projects/programmingDetail/";
+                  break;
+                case "3D Modelling":
+                  projectUrl = "projects/modelDetail/";
+                  break;
+                case "Music":
+                  projectUrl = "projects/musicDetail/";
+                  break;
+                case "Video":
+                  break;
+                default:
+                  break;
+              }
+
+              var projectHtml =
+                '<div class="col-md-4 project-card mb-4 mt-4" data-category="' +
+                project.category +
+                '">\n' +
+                '      <div class="card-3d-rotation">\n' +
+                '        <div class="card-item">\n' +
+                '          <div class="card" style="background: url(' +
+                project.imgSrc +
+                ');">\n' +
+                '            <div class="card-body">\n' +
+                '              <h5 class="card-title">' +
+                project.title +
+                "</h5>\n" +
+                '              <p class="card-text">Category: ' +
+                project.category +
+                "</p>\n" +
+                '              <p class="card-text">' +
+                project.description +
+                "</p>\n" +
+                "            </div>\n" +
+                "          </div>\n" +
+                '          <a href="' +
+                projectUrl +
+                project.id +
+                '" class="card-3d-glow">\n' +
+                '              <div class="education-symbol ' +
+                project.categorySymbol +
+                '">\n' +
+                '                <i class="' +
+                project.categorySymbol +
+                '"></i>\n' +
+                "              </div>\n" +
+                "            </a>\n" +
+                "          </div>\n" +
+                "        </div>\n" +
+                "      </div>\n" +
+                "    </div>\n";
+
+              projectCards.append(projectHtml);
+              const cards = document.querySelectorAll(".card-3d-rotation");
+
+              // Add 3D effect to cards from cards3D.js
+              add3DEffect(cards);
+              // Update odd hexagon symbols
+              updateOddHexagonSymbols();
+            });
+
+            filterProjects(getActiveCategory());
+          }
+
+          // Set the value of categoryHasMoreProjects[category] to False if there are no more projects to load
+          if (projects.length < 3) {
+            if (getActiveCategory() == "All") {
+              for (var key in categoryHasMoreProjects) {
+                categoryHasMoreProjects[key] = false;
+              }
+            } else {
+              categoryHasMoreProjects[getActiveCategory()] = false;
+            }
+            $("#loadMoreBtn").hide();
+          }
+
+          // If all other categories have no more projects to load, set the "All" category to False
+          var allCategoriesHaveNoMoreProjects = true;
+          for (var key in categoryHasMoreProjects) {
+            if (key != "All" && categoryHasMoreProjects[key]) {
+              allCategoriesHaveNoMoreProjects = false;
+              break;
+            }
+          }
+          if (allCategoriesHaveNoMoreProjects) {
+            categoryHasMoreProjects["All"] = false;
+          }
+        },
+        error: function () {
+          // Handle error cases
+        },
+      });
+    }
+  });
+</script>
+
+{% endblock content %}

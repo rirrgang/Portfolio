@@ -1,0 +1,295 @@
+{% extends extendHTML %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+{% get_current_language as current_language %}
+<section class="container" id="about">
+    <div class="row" data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000">
+        <div class="col d-flex justify-content-center">
+            <h2>{% trans "ABOUT" %}</h2>
+            <h2 class="primary-text" style="margin-left: 10px;">{% trans "ME" %}</h2>
+        </div>
+    </div>
+
+    <!-- ===== INFOS ===== -->
+    <div class="row m-5" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+        <div class="col d-flex justify-content-center">
+            <h3 class="primary-text" style="margin-right: 10px;">{% trans "PERSONAL" %}</h3>
+            <h3>{% trans "INFOS" %}</h3>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col" data-aos="fade-right" data-aos-delay="0" data-aos-duration="1000">
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th scope="row">{% trans "First Name" %}</th>
+                        <td>Robert</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{% trans "Last Name" %}</th>
+                        <td>Irrgang</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{% trans "Age" %}</th>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{% trans "Gender" %}</th>
+                        <td>{% trans "Male" %}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{% trans "Nationality" %}</th>
+                        <td>{% trans "Germany" %}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col" data-aos="fade-left" data-aos-delay="0" data-aos-duration="1000">
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th scope="row">{% trans "Achievements" %}</th>
+                        <td>{% trans "Ultra & Marathon Running" %}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{% trans "Hobbies" %}</th>
+                        <td>{% trans "Trail Running, Music, Piano" %}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{% trans "Traits" %}</th>
+                        <td>{% trans "mental strength, endurance, dedication" %}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{% trans "Spoken Languages" %}</th>
+                        <td>{% trans "German, English" %}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{% trans "Work Experience" %}</th>
+                        <td>{% trans "Beginner" %}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+
+    <!-- ===== SKILLS ===== -->
+    <div class="row">
+        <div class="col text-center" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+            <div class="row m-5">
+                <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+                    <h3 class="primary-text" style="margin-right: 10px;">{% trans "TECHNOLOGICAL" %}</h3>
+                    <h3>{% trans "SKILLS" %}</h3>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="0" data-aos-duration="1000">
+                            <div class="card-3d-rotation" data-aos="flip-left" data-aos-delay="500"
+                                data-aos-duration="1000">
+                                <div class="card-item">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{% trans "Web Development" %}</h5>
+                                            <p id="text-anim" class="card-text text-left">{% trans "Unlocking the potential of web development frameworks and principles, I weave magic into your online presence. Guided by Python Django, I bring your dream webpages to life with creativity and precision." %}</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-3d-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="500" data-aos-duration="1000">
+                            <div class="card-3d-rotation" data-aos="flip-left" data-aos-delay="1000"
+                                data-aos-duration="1000">
+                                <div class="card-item">
+                                    <div class="card" style="background-color: darkgoldenrod; color:black">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{% trans "Databases" %}</h5>
+                                            <p id="text-anim" class="card-text text-left">{% trans "Diving deep into SQL and database architecture, I engineer robust solutions for your data needs. From Oracle to PostgreSQL and MySQL, I create tailored solutions that fit like a glove." %}</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-3d-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="1000" data-aos-duration="1000">
+                            <div class="card-3d-rotation" data-aos="flip-left" data-aos-delay="1500"
+                                data-aos-duration="1000">
+                                <div class="card-item">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{% trans "3D Modelling" %}</h5>
+                                            <p id="text-anim" class="card-text text-left">{% trans "Unleashing the power of imagination in mesmerizing 3D creations. From product showcases to artistic masterpieces and immersive gaming experiences, I breathe life into your vision with Blender's magic." %}</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-3d-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PROGRESS BARS / PROGRAMMING SKILLS ===== -->
+
+    <div class="row m-5">
+        <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+            <h3 class="primary-text" style="margin-right: 10px;">{% trans "PROGRAMMING" %}</h3>
+            <h3>{% trans "SKILLS" %}</h3>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+            <div class="custom-progress-bar-container">
+                <h5 class="custom-progress-bar-text">JAVA</h5>
+                <div class="custom-progress-bar" data-type="path" data-easing="easeInOut" data-duration="3000"
+                    data-strokeWidth="5" data-trailwidth="5" data-progress="0.66" data-color="var(--primary-accent)"
+                    data-trailcolor="#35332b"
+                    data-customPath="M 50 5 L 90 27.5 L 90 72.5 L 50 95 L 10 72.5 L 10 27.5 Z"></div>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+            <div class="custom-progress-bar-container">
+                <h5 class="custom-progress-bar-text">C#</h5>
+                <div class="custom-progress-bar" data-type="path" data-easing="easeInOut" data-duration="3000"
+                    data-strokeWidth="5" data-trailwidth="5" data-progress="0.45" data-color="var(--primary-accent)"
+                    data-trailcolor="#35332b"
+                    data-customPath="M 50 5 L 90 27.5 L 90 72.5 L 50 95 L 10 72.5 L 10 27.5 Z"></div>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+            <div class="custom-progress-bar-container">
+                <h5 class="custom-progress-bar-text">PYTHON</h5>
+                <div class="custom-progress-bar" data-type="path" data-easing="easeInOut" data-duration="3000"
+                    data-strokeWidth="5" data-trailwidth="5" data-progress="0.33" data-color="var(--primary-accent)"
+                    data-trailcolor="#35332b"
+                    data-customPath="M 50 5 L 90 27.5 L 90 72.5 L 50 95 L 10 72.5 L 10 27.5 Z"></div>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1000">
+            <div class="custom-progress-bar-container">
+                <h5 class="custom-progress-bar-text">POWERSHELL</h5>
+                <div class="custom-progress-bar" data-type="path" data-easing="easeInOut" data-duration="3000"
+                    data-strokeWidth="5" data-trailwidth="5" data-progress="0.7" data-color="var(--primary-accent)"
+                    data-trailcolor="#35332b"
+                    data-customPath="M 50 5 L 90 27.5 L 90 72.5 L 50 95 L 10 72.5 L 10 27.5 Z"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-5">
+        <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+            <h3 class="primary-text" style="margin-right: 10px;">{% trans "WEBDEV" %}</h3>
+            <h3>{% trans "SKILLS" %}</h3>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+            <div class="custom-progress-bar-container">
+                <h5 class="custom-progress-bar-text">JAVASCRIPT</h5>
+                <div class="custom-progress-bar" data-type="path" data-easing="easeInOut" data-duration="3000"
+                    data-strokeWidth="5" data-trailwidth="5" data-progress="0.66" data-color="var(--primary-accent)"
+                    data-trailcolor="#35332b"
+                    data-customPath="M 50 10 L 72 10 L 95 50 L 72.5 90 L 27.5 90 L 5 50 L 27.5 10 L 50 10 Z">
+                </div>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+            <div class="custom-progress-bar-container">
+                <h5 class="custom-progress-bar-text">HTML5/CSS3</h5>
+                <div class="custom-progress-bar" data-type="path" data-easing="easeInOut" data-duration="3000"
+                    data-strokeWidth="5" data-trailwidth="5" data-progress="0.8" data-color="var(--primary-accent)"
+                    data-trailcolor="#35332b"
+                    data-customPath="M 50 10 L 72 10 L 95 50 L 72.5 90 L 27.5 90 L 5 50 L 27.5 10 L 50 10 Z">
+                </div>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+            <div class="custom-progress-bar-container">
+                <h5 class="custom-progress-bar-text">BOOTSTRAP v5</h5>
+                <div class="custom-progress-bar" data-type="path" data-easing="easeInOut" data-duration="3000"
+                    data-strokeWidth="5" data-trailwidth="5" data-progress="0.5" data-color="var(--primary-accent)"
+                    data-trailcolor="#35332b"
+                    data-customPath="M 50 10 L 72 10 L 95 50 L 72.5 90 L 27.5 90 L 5 50 L 27.5 10 L 50 10 Z">
+                </div>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1000">
+            <div class="custom-progress-bar-container">
+                <h5 class="custom-progress-bar-text">DJANGO</h5>
+                <div class="custom-progress-bar" data-type="path" data-easing="easeInOut" data-duration="3000"
+                    data-strokeWidth="5" data-trailwidth="5" data-progress="0.33" data-color="var(--primary-accent)"
+                    data-trailcolor="#35332b"
+                    data-customPath="M 50 10 L 72 10 L 95 50 L 72.5 90 L 27.5 90 L 5 50 L 27.5 10 L 50 10 Z">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ===== EDUCATION ===== -->
+    <div class="row m-5">
+        <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+            <h4 class="primary-text" style="margin-right: 10px;">{% trans "EDUCATION" %}</h4>
+            <h4>& {% trans "EXPERIENCE" %}</h4>
+        </div>
+    </div>
+    <div class="row">
+        {% for expS in expStations %}
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="col-md-6 mt-4 mb-4" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">
+            {% else %}
+            <div class="col-md-6 mt-4 mb-4" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
+                {% endif %}
+                <div class="card-item education-card-item">
+                    <div class="card education-card">
+                        <div class="card-body">
+                            {% if expS.type == "fa-solid fa-graduation-cap" %}
+                            <!-- Code for Education type -->
+                            <div class="education-symbol"><i class="{{ expS.type }}"></i></div>
+                            {% elif expS.type == "fa-solid fa-briefcase" %}
+                            <!-- Code for Experience type -->
+                            <div class="experience-symbol"><i class="{{ expS.type }}"></i></div>
+                            {% endif %}
+                            
+                            <div class="education-date">
+                                <p>{{ expS.date_from|date:"m/Y" }} - {{ expS.date_to|date:"m/Y" }}</p>
+                            </div>
+                            <div class="row m-4">
+                                <h5 class="card-title education-card-title">{{ expS.title }} - {{ expS.station }}
+                                </h5>
+                            </div>
+
+                            <div class="row ml-4">
+                                <p class="card-text text-left">{{ expS.description }}</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+
+        <!-- ===== CURRICULUM VITAE DOWNLOAD ===== -->
+        <div class="mt-4 row" data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000">
+            <div class="col d-flex justify-content-center">
+                <h2>{% trans "CURRICULUM" %}</h2>
+                <h2 class="primary-text" style="margin-left: 10px;">{% trans "VITAE" %}</h2>
+            </div>
+        </div>
+        <a target="_blank" href="https://drive.google.com/file/d/1kS47qAo9ZjfDS0OwPVZ2_W3GrOOEEygF/view?usp=drive_link" class="mt-4 btn btn-primary form-dark" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">{% trans "DOWNLOAD" %} <i class="fas fa-download"></i></a>
+
+</section>
+
+
+{% endblock content %}

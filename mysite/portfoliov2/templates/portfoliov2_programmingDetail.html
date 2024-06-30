@@ -1,0 +1,146 @@
+{% extends extendHTML %} {% load static %} {% load i18n %} {% block content %}
+<div class="container" style="background: rgba(48, 48, 48, 0.5); padding: 40px; border-radius: 25px">
+  <div class="row">
+    <div class="col">
+      <button onclick="history.back()" class="btn btn-secondary mb-2 mt-4"><i class="fa-solid fa-circle-left"></i> {% trans "Back" %}</button>
+    </div>
+  </div>
+
+  <div class="row mt-4" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+    <div class="col">
+      <h2 class="">{% trans "Programming Project" %}</h2>
+      <h2 class="">{{ data.project.title }}</h2>
+      <p>{% trans "created by" %}: {{ data.programming.authors|safe }}</p>
+    </div>
+  </div>
+
+  {% for art in data.articles %}
+  <div class="row mt-4" id="{{ art.article.title }}">
+    <div class="col">
+      <h3 data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">{{ art.article.title }}</h3>
+      <p data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" class="block-format">{{ art.article.content|safe }}</p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    {% for picture in art.pictures %}
+    <div class="col-md-4 mb-4 mt-4" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+      <div class="card-3d-rotation">
+        <div class="card-item">
+          <div class="card" style="background: url({{ picture.imgSrc }}); height:300px; background-size: cover; background-repeat: round;">
+            <div class="card-body"></div>
+          </div>
+          <div class="card-3d-glow" style="cursor: zoom-in"></div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="row justify-content-center">
+    {% for video in art.videos %}
+    <iframe src="{{ video.videoSrc }}" width="640" height="480"></iframe>
+    {% endfor %}
+  </div>
+
+  {% for code_example in art.code_examples %}
+  <div class="row">
+    <div class="code-container line-numbers">
+      <pre><code class="language-csharp">
+              {{ code_example.code }}
+            </code></pre>
+    </div>
+    <button class="btn btn-primary copy-button mt-4" data-clipboard-target=".code-container">{% trans "Copy" %}</button>
+  </div>
+  {% endfor %} {% for code_link in art.code_links %}
+  <div class="row d-flex justify-content-center align-items-center">
+    {% if code_link.downloadLink %}
+    <a target="_blank" href="{{ code_link.downloadLink }}" class="mt-4 btn btn-primary form-dark mr-2" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">{% trans "DOWNLOAD" %} <i class="fas fa-download"></i></a>
+    {% endif %} {% if code_link.githubLink %}
+    <a target="_blank" href="{{ code_link.githubLink }}" class="mt-4 btn btn-primary form-dark ml-2" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">{% trans "VIEW CODE" %} <i class="fab fa-github"></i></a>
+    {% endif %}
+  </div>
+  {% endfor %} {% endfor %}
+</div>
+
+<script>
+  //Script for opening the picture in the card
+  $(document).ready(function () {
+    $(".card-3d-glow").click(function () {
+      var backgroundUrl = $(this).parent(".card-item").find(".card").css("background-image");
+      backgroundUrl = backgroundUrl.replace('url("', "").replace('")', "");
+      window.open(backgroundUrl, "_blank");
+    });
+  });
+
+  // Script for copying code to clipboard
+  $(document).ready(function () {
+    var copyButtons = document.querySelectorAll(".copy-button");
+    copyButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var targetSelector = button.getAttribute("data-clipboard-target");
+        var targetElement = document.querySelector(targetSelector);
+        console.log(targetElement);
+
+        var clipboard = new ClipboardJS(button, {
+          target: function () {
+            return targetElement;
+          },
+        });
+
+        clipboard.on("success", function (e) {
+          e.clearSelection(); // Clear the text selection
+
+          button.textContent = "Copied!";
+          button.classList.remove("btn-primary");
+          button.classList.add("btn-secondary");
+
+          setTimeout(function () {
+            button.textContent = "Copy";
+            button.classList.add("btn-primary");
+            button.classList.remove("btn-secondary");
+          }, 2000);
+        });
+
+        clipboard.on("error", function (e) {
+          console.error("Copy failed:", e);
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  .code-container {
+    width: 100%;
+    max-height: 800px;
+  }
+
+  pre {
+    max-height: inherit;
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+  }
+
+  /* Customize the scroll bar */
+  pre::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 8px; /* Height of the scrollbar */
+  }
+
+  pre::-webkit-scrollbar-track {
+    background: #434343; /* Background color of the scrollbar track */
+  }
+
+  pre::-webkit-scrollbar-thumb {
+    background: var(--primary-accent); /* Color of the scrollbar thumb */
+    border-radius: 25px;
+  }
+
+  pre::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-accent-hover); /* Color of the scrollbar thumb on hover */
+  }
+</style>
+
+{% endblock content %}

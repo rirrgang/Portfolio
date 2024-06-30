@@ -1,0 +1,34 @@
+{% load static %} {% load i18n %} {% block content %}
+
+<section class="container mt-4" id="home">
+  <div class="row">
+    <div class="col-lg-4 d-flex justify-content-center">
+      <div class="content p4 profile-container">
+        <!--<img class="profile-img" src="https://drive.google.com/uc?export=view&id=1pgE5FiW38y9TEa7vRzY3iRHv1Wi9UBym" alt="" loading="lazy" /> -->
+        <!--<img class="profile-img" src="{% static 'portfoliov2/pictures/profilpic.jpg' %}" alt="" loading="lazy" /> -->
+        <img class="profile-img" src="https://drive.google.com/thumbnail?id=1pgE5FiW38y9TEa7vRzY3iRHv1Wi9UBym&sz=w1000" referrerpolicy="no-referrer" alt="" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="col-lg-8 mt-4">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <h2>{% trans "HI I'AM" %}</h2>
+          <h2 class="primary-text" style="margin-left: 10px">ROBERT</h2>
+          <h2>-</h2>
+        </div>
+      </div>
+      <h3 class="mb-4">{% trans "DATA ENGINEER & SOFTWARE DEVELOPER" %}</h3>
+      <p class="mb-4 text-center" style="max-width: 500px; margin: 0 auto">{% trans "As a Data Engineer and Software Developer, I specialize in unleashing the potential of your data and crafting robust software solutions. With expertise in database management, data integration, and software development, I ensure seamless operations, actionable insights, and drive your success through the power of data." %}</p>
+      <div id="swipe-button" class="btn btn-primary rounded-pill btn-transparent p-0 pr-5">
+        <div id="swipe-icon" class="rounded-circle btn-primary d-inline-flex align-items-center justify-content-center p-3">
+          <i class="fa-solid fa-arrow-right text-white"></i>
+        </div>
+        <a id="swipe-anchor" href="#projects"></a>
+        <span class="pl-3">{% trans "MY PROJECTS" %}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

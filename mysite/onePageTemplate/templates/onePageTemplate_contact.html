@@ -1,0 +1,82 @@
+{% load static %} {% load i18n %} {% block content %} {% load crispy_forms_tags %}
+<section class="container" id="contact" style="padding-top:50px !important; max-width:100%; background: #0566bb;">
+<!-- style= "padding-top: 100px !important; height: 100vh; background-color: lightgray;"> -->
+  <div class="container">
+  <div class="row" data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000">
+    <div class="col d-flex justify-content-center">
+      <h2>{% trans "CONTACT" %}</h2>
+      <h2 class="primary-text" style="margin-left: 10px">{% trans "ME" %}</h2>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-4 mb-4">
+      <h3 class="text-left" data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000">{% trans "REACH OUT" %}</h3>
+      <p class="text-left" data-aos="fade-right" data-aos-delay="0" data-aos-duration="1000">{% trans "Unlock your potential. With personalized expertise and tailored solutions, I'll help you achieve your goals and overcome challenges. Let's collaborate and make a difference together. Reach out today!" %}</p>
+      <div class="row align-items-center" data-aos="fade-right" data-aos-delay="250" data-aos-duration="1000">
+        <div class="col-3">
+          <div class="contact-symbol-circle"><i class="fa-solid fa-map-location-dot"></i></div>
+        </div>
+        <div class="col">
+          <h6 class="mb-0 text-left">{% trans "ADDRESS" %}</h6>
+          <p class="mb-0 text-left">{{ CONTACT_ADRESS}}</p>
+        </div>
+      </div>
+      <div class="row align-items-center" data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+        <div class="col-3">
+          <div class="contact-symbol-circle"><i class="fa-solid fa-phone-volume"></i></div>
+        </div>
+        <div class="col">
+          <h6 class="mb-0 text-left">TELEFON</h6>
+          <p class="mb-0 text-left">{{ CONTACT_PHONE}}</p>
+        </div>
+      </div>
+      <div class="row align-items-center" data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+        <div class="col-3">
+          <div class="contact-symbol-circle"><i class="fa-solid fa-mobile-screen"></i></div>
+        </div>
+        <div class="col">
+          <h6 class="mb-0 text-left">MOBIL</h6>
+          <p class="mb-0 text-left">{{ CONTACT_MOBIL}}</p>
+        </div>
+      </div>
+      <div class="row align-items-center" data-aos="fade-right" data-aos-delay="250" data-aos-duration="1000">
+        <div class="col-3">
+          <div class="contact-symbol-circle"><i class="fa-solid fa-envelope-circle-check"></i></div>
+        </div>
+        <div class="col">
+          <h6 class="mb-0 text-left">E-MAIL</h6>
+          <p class="mb-0 text-left">{{ CONTACT_EMAIL}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <form method="post">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group" data-aos="fade-right" data-aos-delay="0" data-aos-duration="1000">
+              <input type="text" id="id_name" name="name" class="form-control form-dark" required placeholder="Name" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group" data-aos="fade-left" data-aos-delay="0" data-aos-duration="1000">
+              <input type="email" id="id_email" name="email" class="form-control form-dark" required placeholder="E-Mail" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+          <input type="text" id="id_subject" name="subject" class="form-control form-dark" required placeholder="{% trans "Subject" %}" />
+        </div>
+
+        <div class="form-group" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+          <textarea id="id_message" name="message" class="form-control form-dark" rows="15" required placeholder="{% trans "Message" %}"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary form-dark mb-4">{% trans "SEND MESSAGE" %} <i class="fas fa-paper-plane"></i> </button>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+{% endblock content %}

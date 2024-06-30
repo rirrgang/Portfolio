@@ -1,0 +1,37 @@
+{% load i18n %}
+<footer class="footer mt-5">
+  <div class="container text-center">
+    <span>{% trans "Created with" %} <i id="footerHeartIcon" class="fa-solid fa-heart"></i> {% trans "by Robert Irrgang &copy; 2023 RobDevSolutions. All rights reserved." %}</span>
+    <div class="row justify-content-center">
+      <a class="btn btn-dark m-2" href="{% url 'portfoliov2:legalnotice'%}">{% trans "Legal Notice" %}</a>
+      <!-- <a style="color: white" class="btn btn-primary m-2" id="toggle-button">Color Theme <i class="fa-solid fa-moon"></i></a> -->
+    </div>
+
+    <div class="footer-social-nav mt-2">
+      <a class="social-link globe has-tooltip" target="" href="{% url 'portfoliov2:switchLanguage'%}">
+        <i class="fa fa-globe"></i>
+        <span class="tooltip tooltip-top"> {% trans "Change Language" %} </span>
+      </a>
+      <a href="https://www.linkedin.com/in/robert-irrgang-625ba2227/" target="_blank" class="social-link has-tooltip">
+        <i class="fab fa-linkedin"></i>
+        <span class="tooltip tooltip-top"> {% trans "Visit LinkedIn" %} </span>
+      </a>
+      <a href="https://www.xing.com/profile/Robert_Irrgang2/cv" target="_blank" class="social-link has-tooltip">
+        <i class="fab fa-xing"></i>
+        <span class="tooltip tooltip-top"> {% trans "Visit Xing" %} </span>
+      </a>
+      <a href="https://www.youtube.com/@RobertIrrgang" target="_blank" class="social-link has-tooltip">
+        <i class="fab fa-youtube"></i>
+        <span class="tooltip tooltip-top"> {% trans "Visit YouTube" %} </span>
+      </a>
+      <a href="https://twitter.com/irrgang_robert" target="_blank" class="social-link has-tooltip">
+        <i class="fab fa-twitter"></i>
+        <span class="tooltip tooltip-top"> {% trans "Visit Twitter" %} </span>
+      </a>
+      <a href="https://github.com/rirrgang" target="_blank" class="social-link has-tooltip">
+        <i class="fab fa-github"></i>
+        <span class="tooltip tooltip-top"> {% trans "Visit GitHub" %} </span>
+      </a>
+    </div>
+  </div>
+</footer>

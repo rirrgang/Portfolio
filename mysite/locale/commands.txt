@@ -1,0 +1,7 @@
+# Befehl zum erkennen von Text der übersetzt werden soll
+django-admin makemessages -l de        
+
+
+# Befehl zum kompilieren von übersetzten Nachrichten
+# use-fuzzy == bei identischen Texten trotzdem übersetzen
+django-admin compilemessages --use-fuzzy -l de
